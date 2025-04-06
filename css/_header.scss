@@ -1,0 +1,150 @@
+@use "setting" as s;
+@use "sass:math";
+
+.header {
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  @include s.mq("sp") {
+    height: 72px;
+    background-color: s.$colorWhite;
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: percentage(math.div(1220, 1280));
+  height: 100%;
+  margin: 0 auto;
+  @include s.mq("sp") {
+    padding: 30px;
+  }
+}
+
+.header__ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  @include s.mq("sp") {
+    display: none;
+  }
+}
+
+.header__link {
+  font-weight: bold;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.header__img {
+  width: 130px;
+  height: 120px;
+  @include s.mq("sp") {
+    height: auto;
+    width: 55px;
+  }
+}
+
+.header__sns_link {
+  display: flex;
+  gap: 20px;
+  img {
+    display: block;
+    @include s.mq("sp") {
+      width: 33px;
+      height: 30px;
+    }
+  }
+}
+
+.hamburger-menu {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.4s;
+  padding-top: 20px;
+  position: relative;
+  display: none;
+  @include s.mq("sp") {
+    display: block;
+  }
+}
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+.hamburger-menu span {
+  width: 35px;
+  height: 3px;
+  background: s.$colorBlue;
+  position: absolute;
+  left: 15px;
+  transition: 0.4s ease-in-out;
+}
+
+.hamburger-menu span:nth-child(1) {
+  top: 10px;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 20px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 30px;
+}
+
+.header__mask {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  right: -120%;
+  top: 72px;
+  background: url(../image/overlay.png) center top / cover no-repeat transparent;
+  transition: 0.5s;
+}
+
+.header__mask.active {
+  right: 0px;
+  z-index: 10;
+}
+
+#hamburger-navigation .sections {
+  margin-top: 80px;
+  margin-left: 11%;
+}
+#hamburger-navigation .sections li {
+  margin-bottom: 48px;
+}
+#hamburger-navigation .sections a {
+  color: s.$colorBlue;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  top: 20px;
+  left: 15px;
+  background: s.$colorBlue;
+  transform: rotate(-45deg);
+}
+
+.hamburger-menu.active span:nth-child(2),
+.hamburger-menu.active span:nth-child(3) {
+  top: 20px;
+  background: s.$colorBlue;
+  transform: rotate(45deg);
+}
