@@ -58,6 +58,7 @@ img {
 
 .section__title_ja {
   color: #f1c11a;
+  margin-top: 5px;
 }
 
 .section__btn {
@@ -482,7 +483,7 @@ Support
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 100px;
+  gap: 75px;
   z-index: 2;
 }
 @media screen and (max-width: 821px) {
@@ -502,7 +503,7 @@ Support
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 200px;
+  gap: 180px;
   height: 670px;
   width: 465px;
 }
@@ -530,6 +531,7 @@ Support
 
 .support02 {
   max-width: 225px;
+  height: auto;
 }
 @media screen and (max-width: 821px) {
   .support02 {
@@ -554,9 +556,9 @@ Support
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 @media screen and (max-width: 821px) {
   .support__img_wrap {
@@ -574,9 +576,6 @@ Support
   }
 }
 
-.support__text_wrap {
-  margin-top: 8px;
-}
 .support__text_wrap h2 {
   font-size: 34px;
   color: #18669e;
@@ -619,10 +618,10 @@ Service
 }
 
 .service__inner {
-  margin: 110px auto 220px;
+  margin: 0px auto 220px;
   width: 84.375%;
   max-width: 1080px;
-  height: 877px;
+  height: 780px;
 }
 @media screen and (max-width: 821px) {
   .service__inner {
@@ -666,9 +665,6 @@ Service
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -707,7 +703,7 @@ Service
 About
 -------------------------------------------*/
 .about__inner {
-  margin: 110px auto 220px;
+  margin: 40px auto 110px;
   width: 84.375%;
   max-width: 1080px;
 }
@@ -729,7 +725,7 @@ About
   width: 237px;
   height: 185px;
   left: 4.140625%;
-  top: -105px;
+  top: -160px;
 }
 @media screen and (max-width: 821px) {
   .about__layout::before {
@@ -789,7 +785,7 @@ About
 }
 .about__title h3 {
   position: absolute;
-  top: -100px;
+  top: -110px;
   left: 600px;
 }
 @media screen and (max-width: 821px) {
@@ -801,7 +797,7 @@ About
 }
 .about__title p {
   position: absolute;
-  top: -50px;
+  top: -60px;
   left: 600px;
 }
 @media screen and (max-width: 821px) {
@@ -811,7 +807,6 @@ About
 }
 
 .about__text_wrap {
-  width: 412px;
   margin-left: -40px;
   height: auto;
   width: 100%;
@@ -831,10 +826,11 @@ About
 }
 .about__text_wrap p {
   font-size: 16px;
+  width: 412px;
 }
 
 .about__btn {
-  margin-top: 50px;
+  margin-top: 60px;
   width: 258px;
 }
 .about__btn .u-btn {
@@ -1078,7 +1074,7 @@ Staff
 Recruit
 -------------------------------------------*/
 .recruit__layout {
-  padding: 121px 17.34375% 159px 0;
+  padding: 121px 0 130px 0;
   background: transparent url(../image/recruit-bg.png) no-repeat center/cover;
   position: relative;
 }
@@ -1275,7 +1271,6 @@ Contact
 
 .contact__btn {
   width: 276px;
-  margin: 0 auto;
 }
 .contact__btn .u-btn {
   color: #fff;

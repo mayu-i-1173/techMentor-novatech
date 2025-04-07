@@ -170,7 +170,7 @@ Support
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 75px;
   z-index: 2;
   @include s.mq("sp") {
     gap: 0;
@@ -181,7 +181,7 @@ Support
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 200px;
+  gap: 180px;
   height: 670px;
   width: 465px;
   @include s.mq("sp") {
@@ -205,6 +205,7 @@ Support
 
 .support02 {
   max-width: 225px;
+  height: auto;
   @include s.mq("sp") {
     width: 180px;
   }
@@ -221,7 +222,7 @@ Support
   max-width: 500px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   @include s.mq("sp") {
     width: 100%;
   }
@@ -236,7 +237,6 @@ Support
 }
 
 .support__text_wrap {
-  margin-top: 8px;
   h2 {
     font-size: 34px;
     color: s.$colorBlue;
@@ -280,10 +280,10 @@ Service
 }
 
 .service__inner {
-  margin: 110px auto 220px;
+  margin: 0px auto 220px;
   @include s.innerWidth;
   max-width: 1080px;
-  height: 877px;
+  height: 780px;
   @include s.mq("sp") {
     margin: 54px auto 116px;
     flex-direction: column;
@@ -307,7 +307,6 @@ Service
   display: flex;
   flex-direction: column;
   gap: 20px;
-  justify-content: space-between;
   align-items: center;
   max-width: 310px;
   height: 614px;
@@ -343,7 +342,7 @@ About
 -------------------------------------------*/
 
 .about__inner {
-  margin: 110px auto 220px;
+  margin: 40px auto 110px;
   @include s.innerWidth;
   max-width: 1080px;
 }
@@ -362,7 +361,7 @@ About
     width: 237px;
     height: 185px;
     left: percentage(math.div(53, 1280));
-    top: -105px;
+    top: -160px;
     @include s.mq("sp") {
       width: 135px;
       height: 105px;
@@ -408,7 +407,7 @@ About
   }
   h3 {
     position: absolute;
-    top: -100px;
+    top: -110px;
     left: 600px;
     @include s.mq("sp") {
       position: relative;
@@ -418,7 +417,7 @@ About
   }
   p {
     position: absolute;
-    top: -50px;
+    top: -60px;
     left: 600px;
     @include s.mq("sp") {
       position: static;
@@ -427,7 +426,6 @@ About
 }
 
 .about__text_wrap {
-  width: 412px;
   margin-left: -40px;
   height: auto;
   width: 100%;
@@ -444,11 +442,12 @@ About
   }
   p {
     font-size: 16px;
+    width: 412px;
   }
 }
 
 .about__btn {
-  margin-top: 50px;
+  margin-top: 60px;
   width: 258px;
   .u-btn {
     color: s.$colorWhite;
@@ -654,7 +653,7 @@ Recruit
 -------------------------------------------*/
 
 .recruit__layout {
-  padding: 121px percentage(math.div(222, 1280)) 159px 0;
+  padding: 121px 0 130px 0;
   background: transparent url(../image/recruit-bg.png) no-repeat center / cover;
   position: relative;
   &::before {
@@ -804,7 +803,6 @@ Contact
 
 .contact__btn {
   width: 276px;
-  margin: 0 auto;
   .u-btn {
     color: s.$colorWhite;
     background-color: s.$colorBtn;
