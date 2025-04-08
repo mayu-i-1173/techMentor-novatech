@@ -56,11 +56,19 @@ img {
 .section__title_ja {
   color: s.$colorYellow;
   margin-top: 5px;
+  @include s.mq("sp") {
+    margin-top: 0px;
+    font-size: 12px;
+  }
 }
 
 .section__btn {
   width: 258px;
   margin: 0 auto;
+  @include s.mq("sp") {
+    width: 274px;
+    margin-top: 15px;
+  }
   .u-btn {
     color: s.$colorWhite;
     background-color: s.$colorBtn;
@@ -69,6 +77,10 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include s.mq("sp") {
+      width: 274px;
+      height: 63px;
+    }
     p {
       font-size: 14px;
       line-height: 1.2857142857;

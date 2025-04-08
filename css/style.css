@@ -60,10 +60,22 @@ img {
   color: #f1c11a;
   margin-top: 5px;
 }
+@media screen and (max-width: 821px) {
+  .section__title_ja {
+    margin-top: 0px;
+    font-size: 12px;
+  }
+}
 
 .section__btn {
   width: 258px;
   margin: 0 auto;
+}
+@media screen and (max-width: 821px) {
+  .section__btn {
+    width: 274px;
+    margin-top: 15px;
+  }
 }
 .section__btn .u-btn {
   color: #fff;
@@ -79,6 +91,12 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 821px) {
+  .section__btn .u-btn {
+    width: 274px;
+    height: 63px;
+  }
 }
 .section__btn .u-btn p {
   font-size: 14px;
@@ -469,6 +487,7 @@ Support
     flex-direction: column;
     width: 92.8571428571%;
     height: auto;
+    gap: 40px;
   }
 }
 
@@ -492,6 +511,12 @@ Support
   }
 }
 
+.support01 {
+  width: 100%;
+  aspect-ratio: 1.5;
+  height: auto;
+}
+
 .support__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,7 +536,7 @@ Support
   .support__right {
     width: 100%;
     height: auto;
-    gap: 10px;
+    gap: 30px;
   }
 }
 
@@ -526,6 +551,7 @@ Support
   .support__img {
     width: 100%;
     aspect-ratio: 1.5;
+    height: auto;
   }
 }
 
@@ -536,6 +562,7 @@ Support
 @media screen and (max-width: 821px) {
   .support02 {
     width: 180px;
+    margin-top: 40px;
   }
 }
 
@@ -576,11 +603,19 @@ Support
   }
 }
 
+@media screen and (max-width: 821px) {
+  .support__text_wrap {
+    padding-left: 10px;
+  }
+}
 .support__text_wrap h2 {
-  font-size: 34px;
+  font-size: 31px;
   color: #18669e;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+.support__text_wrap p {
+  font-size: 15px;
 }
 
 /*-------------------------------------------
@@ -604,6 +639,11 @@ Service
   bottom: -110px;
   background: transparent url(../image/service-bg02.png) no-repeat top center/cover;
 }
+@media screen and (max-width: 821px) {
+  .service__layout::after {
+    background: transparent;
+  }
+}
 .service__layout::before, .service__layout::after {
   content: "";
   position: absolute;
@@ -613,7 +653,7 @@ Service
 }
 @media screen and (max-width: 821px) {
   .service__layout {
-    padding: 80px 0 61px;
+    padding: 80px 0 1px;
   }
 }
 
@@ -625,12 +665,14 @@ Service
 }
 @media screen and (max-width: 821px) {
   .service__inner {
-    margin: 54px auto 116px;
+    margin: 43px auto 116px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     height: auto;
+    padding: 0 20px;
+    width: 100%;
   }
 }
 
@@ -653,6 +695,7 @@ Service
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
+    margin-top: 15px;
   }
 }
 
@@ -674,14 +717,21 @@ Service
 @media screen and (max-width: 821px) {
   .service__item {
     width: 100%;
+    max-width: none;
+    gap: 0px;
   }
 }
 .service__item:nth-child(2) {
   margin-top: 48px;
 }
 @media screen and (max-width: 821px) {
+  .service__item:nth-child(2) {
+    margin-top: 38px;
+  }
+}
+@media screen and (max-width: 821px) {
   .service__item:nth-child(3) {
-    margin-top: 48px;
+    margin-top: 38px;
   }
 }
 .service__item img {
@@ -690,13 +740,82 @@ Service
   -webkit-box-shadow: 4px 4px 10px rgba(39, 43, 48, 0.18);
           box-shadow: 4px 4px 10px rgba(39, 43, 48, 0.18);
 }
+@media screen and (max-width: 821px) {
+  .service__item img {
+    width: 354px;
+    height: 408px;
+  }
+}
 .service__item h4 {
   font-weight: bold;
   font-size: 24px;
   color: #18669e;
 }
-.service__item p {
-  font-size: 16px;
+@media screen and (max-width: 821px) {
+  .service__item h4 {
+    margin: 20px auto 10px;
+  }
+}
+@media screen and (max-width: 821px) {
+  .service__item p {
+    text-align: left;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 821px) {
+  .service__item_p {
+    padding: 0 18px;
+    font-size: 16px;
+  }
+}
+
+.service__btn {
+  width: 258px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 821px) {
+  .service__btn {
+    width: 274px;
+    margin-top: 15px;
+  }
+}
+.service__btn .u-btn {
+  color: #fff;
+  background-color: #5f82b3;
+  padding: 18px 62px;
+  border-radius: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media screen and (max-width: 821px) {
+  .service__btn .u-btn {
+    width: 274px;
+    height: 63px;
+  }
+}
+.service__btn .u-btn p {
+  font-size: 17px;
+  line-height: 1.2857142857;
+  letter-spacing: 0.03em;
+  padding-right: 23px;
+}
+.service__btn .u-btn img {
+  width: 38px;
+  height: 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.service__btn .u-btn:hover img {
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
 }
 
 /*-------------------------------------------
@@ -706,6 +825,9 @@ About
   margin: 40px auto 110px;
   width: 84.375%;
   max-width: 1080px;
+  padding: 0px 20px;
+  width: 100%;
+  margin-bottom: 80px;
 }
 
 .about__layout {
@@ -715,7 +837,8 @@ About
 }
 @media screen and (max-width: 821px) {
   .about__layout {
-    padding-top: 50px;
+    padding-top: 0px;
+    margin: 70px auto 0px;
   }
 }
 .about__layout::before {
@@ -772,6 +895,7 @@ About
   .about__person_img {
     width: 390px;
     height: 254px;
+    margin-top: 30px;
   }
 }
 
@@ -824,6 +948,11 @@ About
   letter-spacing: 0.08em;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 821px) {
+  .about__text_wrap h4 {
+    margin-top: 15px;
+  }
+}
 .about__text_wrap p {
   font-size: 16px;
   width: 412px;
@@ -832,6 +961,11 @@ About
 .about__btn {
   margin-top: 60px;
   width: 258px;
+}
+@media screen and (max-width: 821px) {
+  .about__btn {
+    margin-top: 30px;
+  }
 }
 .about__btn .u-btn {
   color: #fff;
@@ -862,6 +996,12 @@ About
 .about__btn .u-btn:hover img {
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+@media screen and (max-width: 821px) {
+  .about__text {
+    width: 100%;
+  }
 }
 
 /*-------------------------------------------
@@ -898,6 +1038,7 @@ Company
   .company__grid_item img {
     width: 20px;
     height: 20px;
+    margin-top: 15px;
   }
 }
 .company__grid_item h2 {
@@ -969,7 +1110,7 @@ Staff
 }
 @media screen and (max-width: 821px) {
   .staff__layout {
-    padding: 100px 10px;
+    padding: 80px 17px;
   }
 }
 
@@ -1033,6 +1174,7 @@ Staff
 @media screen and (max-width: 821px) {
   .staff__img {
     width: 100%;
+    height: 260px;
   }
 }
 
@@ -1125,6 +1267,7 @@ Recruit
 @media screen and (max-width: 821px) {
   .recruit__img {
     width: 100%;
+    height: 284px;
   }
 }
 

@@ -163,6 +163,7 @@ Support
     flex-direction: column;
     width: 92.8571428571%;
     height: auto;
+    gap: 40px;
   }
 }
 
@@ -177,6 +178,12 @@ Support
   }
 }
 
+.support01 {
+  width: 100%;
+  aspect-ratio: 1.5;
+  height: auto;
+}
+
 .support__right {
   display: flex;
   flex-direction: column;
@@ -187,7 +194,7 @@ Support
   @include s.mq("sp") {
     width: 100%;
     height: auto;
-    gap: 10px;
+    gap: 30px;
   }
 }
 
@@ -200,6 +207,7 @@ Support
   @include s.mq("sp") {
     width: 100%;
     aspect-ratio: 1.5;
+    height: auto;
   }
 }
 
@@ -208,6 +216,7 @@ Support
   height: auto;
   @include s.mq("sp") {
     width: 180px;
+    margin-top: 40px;
   }
 }
 
@@ -237,11 +246,17 @@ Support
 }
 
 .support__text_wrap {
+  @include s.mq("sp") {
+    padding-left: 10px;
+  }
   h2 {
-    font-size: 34px;
+    font-size: 31px;
     color: s.$colorBlue;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 15px;
   }
 }
 
@@ -265,6 +280,9 @@ Service
     bottom: -110px;
     background: transparent url(../image/service-bg02.png) no-repeat top center /
       cover;
+    @include s.mq("sp") {
+      background: transparent;
+    }
   }
   &::before,
   &::after {
@@ -275,7 +293,7 @@ Service
     left: 0;
   }
   @include s.mq("sp") {
-    padding: 80px 0 61px;
+    padding: 80px 0 1px;
   }
 }
 
@@ -285,10 +303,11 @@ Service
   max-width: 1080px;
   height: 780px;
   @include s.mq("sp") {
-    margin: 54px auto 116px;
+    margin: 43px auto 116px;
     flex-direction: column;
-    // width: percentage(math.div(390, 420));
     height: auto;
+    padding: 0 20px;
+    width: 100%;
   }
 }
 
@@ -300,6 +319,7 @@ Service
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-top: 15px;
   }
 }
 
@@ -312,28 +332,88 @@ Service
   height: 614px;
   @include s.mq("sp") {
     width: 100%;
+    max-width: none;
+    gap: 0px;
   }
   &:nth-child(2) {
     margin-top: 48px;
+    @include s.mq("sp") {
+      margin-top: 38px;
+    }
   }
   &:nth-child(3) {
     @include s.mq("sp") {
-      margin-top: 48px;
+      margin-top: 38px;
     }
   }
   img {
     border-radius: 10px;
     height: 357px;
     box-shadow: 4px 4px 10px rgba(39, 43, 48, 0.18);
+    @include s.mq("sp") {
+      width: 354px;
+      height: 408px;
+    }
   }
 
   h4 {
     font-weight: bold;
     font-size: 24px;
     color: s.$colorBlue;
+    @include s.mq("sp") {
+      margin: 20px auto 10px;
+    }
   }
   p {
+    @include s.mq("sp") {
+      text-align: left;
+      margin: 0 auto;
+    }
+  }
+}
+
+.service__item_p {
+  @include s.mq("sp") {
+    padding: 0 18px;
     font-size: 16px;
+  }
+}
+
+.service__btn {
+  width: 258px;
+  margin: 0 auto;
+  @include s.mq("sp") {
+    width: 274px;
+    margin-top: 15px;
+  }
+  .u-btn {
+    color: s.$colorWhite;
+    background-color: s.$colorBtn;
+    padding: 18px 62px;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include s.mq("sp") {
+      width: 274px;
+      height: 63px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.2857142857;
+      letter-spacing: 0.03em;
+      padding-right: 23px;
+    }
+    img {
+      width: 38px;
+      height: 4px;
+      transition: all 0.3s;
+    }
+    &:hover {
+      img {
+        transform: translateX(50%);
+      }
+    }
   }
 }
 
@@ -345,6 +425,9 @@ About
   margin: 40px auto 110px;
   @include s.innerWidth;
   max-width: 1080px;
+  padding: 0px 20px;
+  width: 100%;
+  margin-bottom: 80px;
 }
 
 .about__layout {
@@ -352,7 +435,8 @@ About
   margin: 110px auto 120px;
   padding-top: 109px;
   @include s.mq("sp") {
-    padding-top: 50px;
+    padding-top: 0px;
+    margin: 70px auto 0px;
   }
   &::before {
     content: "";
@@ -397,6 +481,7 @@ About
   @include s.mq("sp") {
     width: 390px;
     height: 254px;
+    margin-top: 30px;
   }
 }
 
@@ -439,6 +524,9 @@ About
     color: s.$colorBlue;
     letter-spacing: 0.08em;
     margin-bottom: 16px;
+    @include s.mq("sp") {
+      margin-top: 15px;
+    }
   }
   p {
     font-size: 16px;
@@ -449,6 +537,9 @@ About
 .about__btn {
   margin-top: 60px;
   width: 258px;
+  @include s.mq("sp") {
+    margin-top: 30px;
+  }
   .u-btn {
     color: s.$colorWhite;
     background-color: s.$colorBtn;
@@ -472,6 +563,12 @@ About
         transform: translateX(50%);
       }
     }
+  }
+}
+
+.about__text {
+  @include s.mq("sp") {
+    width: 100%;
   }
 }
 
@@ -507,6 +604,7 @@ Company
     @include s.mq("sp") {
       width: 20px;
       height: 20px;
+      margin-top: 15px;
     }
   }
   h2 {
@@ -573,7 +671,7 @@ Staff
     }
   }
   @include s.mq("sp") {
-    padding: 100px 10px;
+    padding: 80px 17px;
   }
 }
 
@@ -617,6 +715,7 @@ Staff
   border-radius: 10px;
   @include s.mq("sp") {
     width: 100%;
+    height: 260px;
   }
 }
 
@@ -691,6 +790,7 @@ Recruit
   width: 640px;
   @include s.mq("sp") {
     width: 100%;
+    height: 284px;
   }
 }
 
